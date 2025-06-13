@@ -13,3 +13,11 @@ def get_char_count(book_as_string):
         for i in char_count:
                 unique_char[i] = lowercase_book.count(i)
         return unique_char
+def sort_dict(dict):
+        list_dict = []
+        for item in dict:
+              list_dict.append({"Character": item, "Number": dict[item]})
+        list_dict.sort(reverse=True, key=sort_on)
+        return list_dict
+def sort_on(dict):
+        return dict["Number"]
